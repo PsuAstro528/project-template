@@ -1,4 +1,10 @@
-# Astro 528 [Class Project](https://psuastro528.github.io/project/)
+# Astro 528 [Class Project](https://psuastro528.github.io/Fall2023/project/)
+
+[![](https://img.shields.io/badge/docs-stable-blue.svg)](https://PsuAstro528.github.io/project-template/stable)
+
+GitHub Actions : [![Build Status](https://github.com/JuliaLang/Example.jl/workflows/CI/badge.svg)](https://github.com/JuliaLang/Example.jl/actions?query=workflow%3ACI+branch%3Amaster)
+
+AppVeyor: [![Build Status](https://ci.appveyor.com/api/p
 
 ## Project Goals:  
 - Put software development skills learned during class and lab exercises into practice on a real world problem
