@@ -47,12 +47,15 @@ jobs:
       #    file: lcov.info
   docs:
     name: Documentation
+    permissions:
+      contents: write
     runs-on: ubuntu-latest
     steps:
       - uses: actions/checkout@v2
       - uses: julia-actions/setup-julia@v1
         with:
-          version: '1'
+          version: '1.9.2'  # Match version on Roar Collab for Fall 2023
+          #version: '1'
       - run: |
           julia --project=docs -e '
             using Pkg
