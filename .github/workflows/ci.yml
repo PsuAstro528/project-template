@@ -12,7 +12,7 @@ jobs:
       fail-fast: false
       matrix:
         version:
-          - 1.9.2 # Version setup for class on Roar Collab for Fall 2023
+          - 1.11.2 # Version setup for class on Roar Collab for Fall 2025
           #- 1.0
           #- 1 # automatically expands to the latest stable 1.x release of Julia
           #- nightly
@@ -54,7 +54,7 @@ jobs:
       - uses: actions/checkout@v2
       - uses: julia-actions/setup-julia@v1
         with:
-          version: '1.9.2'  # Match version on Roar Collab for Fall 2023
+          version: '1.11.2'  # Match version on Roar Collab for Fall 2025
           #version: '1'
       - run: |
           julia --project=docs -e '
