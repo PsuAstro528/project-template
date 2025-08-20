@@ -1,4 +1,4 @@
-# Astro 528 [Class Project](https://psuastro528.github.io/Fall2023/project/)
+# Astro 528 [Class Project](https://psuastro528.github.io/Fall2025/project/)
 
 [![](https://img.shields.io/badge/docs-stable-blue.svg)](https://PsuAstro528.github.io/project-template/stable)
 
@@ -17,7 +17,7 @@ Prior to the [peer code review](https://psuastro528.github.io/Fall2023/project/c
 Remember to commit often and push your repository to GitHub prior to each project deadline.
 
 ## Class Project Schedule
-- Project proposal (due Sept 12)
+- [Project proposal](proposal.md) (due Sept 12)
 - Serial version of code (due Oct 8)
 - Peer code review (due Oct 15)
 - Parallel version of code (multi-core) (due Nov 5)
