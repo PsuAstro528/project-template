@@ -3,4 +3,6 @@
 *.jl.mem
 /docs/build/
 /docs/Manifest.toml
+/deps/build.log
+.vscode
 

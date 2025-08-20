@@ -17,11 +17,11 @@ Prior to the [peer code review](https://psuastro528.github.io/Fall2023/project/c
 Remember to commit often and push your repository to GitHub prior to each project deadline.
 
 ## Class Project Schedule
-- Project proposal (due Sept 6)
-- Serial version of code (due Oct 2)
-- Peer code review (due Oct 9)
-- Parallel version of code (multi-core) (due Oct 30)
-- Second parallel version of code (distributed-memory/GPU/cloud) (due Nov 13)
-- Completed code, documentation, tests, packaging (optional) & reflection (due Nov 29)
-- Class presentations (Nov 27 - Dec 6, [detailed schedule](https://github.com/PsuAstro528/PresentationsSchedule2023) )
+- Project proposal (due Sept 12)
+- Serial version of code (due Oct 8)
+- Peer code review (due Oct 15)
+- Parallel version of code (multi-core) (due Nov 5)
+- Second parallel version of code (distributed-memory or GPU) (due Nov 21)
+- Completed code, documentation, tests, packaging (optional) & reflection (due Dec 3)
+- Class presentations (Dec 3 - Dec 12, [detailed schedule](https://github.com/PsuAstro528/PresentationsSchedule2025) )
 
