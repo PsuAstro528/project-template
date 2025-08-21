@@ -1,7 +1,8 @@
 name: CI
 on:
   push:
-    branches: [main]
+    branches: [main,]
+    #branches: [main, master]
     tags: ["*"]
   pull_request:
 jobs:
@@ -12,56 +13,39 @@ jobs:
       fail-fast: false
       matrix:
         version:
-          - 1.11.2 # Version setup for class on Roar Collab for Fall 2025
-          #- 1.0
-          #- 1 # automatically expands to the latest stable 1.x release of Julia
-          #- nightly
+          - '1.11' # automatically expands to the latest stable 1.x release of Julia
+          #- 'min'
+          #- 'pre'
         os:
           - ubuntu-latest
+          #- windows-latest
         arch:
           - x64
-          #- x86
-        #include:  # We don't need to test on other operating systems
-          # test macOS and Windows with latest Julia only
-          #- os: macOS-latest
-          #  arch: x64
-          #  version: 1
-          #- os: windows-latest
-          #  arch: x64
-          #  version: 1
-          #- os: windows-latest
-          #  arch: x86
-          #  version: 1
+        #include:
+        #  - os: macOS-latest
+        #    arch: aarch64
+        #    version: 1
     steps:
-      - uses: actions/checkout@v2
-      - uses: julia-actions/setup-julia@v1
+      - uses: actions/checkout@v4
+      - uses: julia-actions/setup-julia@v2
         with:
           version: ${{ matrix.version }}
           arch: ${{ matrix.arch }}
-      - uses: julia-actions/cache@v1
-      - uses: julia-actions/julia-buildpkg@v1  # Not all projects will be a package
+      - uses: julia-actions/cache@v2
+      - uses: julia-actions/julia-buildpkg@v1
       - uses: julia-actions/julia-runtest@v1
-      #- uses: julia-actions/julia-processcoverage@v1   # If not a package, then code coverage CI won't work
-      #- uses: codecov/codecov-action@v1
+      #- uses: julia-actions/julia-processcoverage@v1
+      #- uses: codecov/codecov-action@v5
       #  with:
-      #    file: lcov.info
+      #    files: lcov.info
+      #    token: ${{ secrets.CODECOV_TOKEN }}
   docs:
     name: Documentation
-    permissions:
-      contents: write
     runs-on: ubuntu-latest
     steps:
-      - uses: actions/checkout@v2
-      - uses: julia-actions/setup-julia@v1
-        with:
-          version: '1.11.2'  # Match version on Roar Collab for Fall 2025
-          #version: '1'
-      - run: |
-          julia --project=docs -e '
-            using Pkg
-            Pkg.develop(PackageSpec(path=pwd()))
-            Pkg.instantiate()'
-      - run: julia --project=docs docs/make.jl
+      - uses: actions/checkout@v4
+      - uses: julia-actions/julia-buildpkg@latest
+      - uses: julia-actions/julia-docdeploy@latest
         env:
           GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
           DOCUMENTER_KEY: ${{ secrets.DOCUMENTER_KEY }}
