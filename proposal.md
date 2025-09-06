@@ -12,7 +12,7 @@ INSERT TEXT
 
 INSERT TEXT
 
-## How will you test that your code is giving accurate results? (1 point)
+## How will you test that your code is giving accurate results? (0.5 point)
 
 INSERT TEXT
 
@@ -20,8 +20,7 @@ INSERT TEXT
 
 INSERT TEXT
 
-## Complete list of what computer architectures you will use, as well as the justification for your choices (1 point)
-
+## Complete list of what computer architectures you will use, as well as the justification for your choices (0.5 point)
 
 Edit the list below (most deleting lines that you won't use) as appropriate for your project.
 
@@ -41,11 +40,11 @@ I anticipate that most students will be able to have their computational needs m
 If you anticipate needing additional computing resources, describe your needs in more detail. 
 Do you need help getting access to those resources?
 
-## Complete list of what programming languages, libraries and packages you will use, as well as the rationale of your choices.  (1 point)
+## List of what programming languages, libraries and packages you will use, as well as the rationale of your choices.  (1 point)
 
 Programming language(s) to be used:
 
-Julia 
+Julia:  Instructor recommended it as the best choice for modern numerical computing. 
 
 List of any libraries/packages that you know will be needed for your project:  
 
